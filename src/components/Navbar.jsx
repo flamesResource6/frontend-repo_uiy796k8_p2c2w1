@@ -1,11 +1,14 @@
-import { Menu, Shield, PhoneCall } from 'lucide-react'
+import { Menu, PhoneCall } from 'lucide-react'
+import Logo from './Logo'
 
 function Navbar() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl/80 bg-[#0a1020]/70 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded-md bg-gradient-to-br from-blue-400 to-cyan-300 shadow-lg shadow-blue-500/30" />
+          <div className="h-8 w-8 grid place-items-center">
+            <Logo size={28} animated={false} />
+          </div>
           <span className="text-white font-semibold tracking-tight">DisasterMS</span>
         </div>
         <nav className="hidden md:flex items-center gap-8 text-sm text-white/80">

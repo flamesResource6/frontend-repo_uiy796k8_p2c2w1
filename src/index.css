@@ -44,3 +44,38 @@
     --tw-exit-translate-y: initial;
   }
 }
+
+/* Logo animations */
+.logo-rotate-slow {
+  animation: logo-rotate 12s linear infinite;
+  transform-origin: center;
+}
+
+.logo-pulse {
+  animation: logo-pulse 5s ease-in-out infinite;
+}
+
+.segment-activate {
+  animation: segment-activate 4s ease-in-out infinite;
+}
+
+.delay-0 { animation-delay: 0s; }
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+
+@keyframes logo-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes logo-pulse {
+  0%, 80% { opacity: 0; }
+  90% { opacity: 0.35; }
+  100% { opacity: 0; }
+}
+
+@keyframes segment-activate {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.15); }
+}

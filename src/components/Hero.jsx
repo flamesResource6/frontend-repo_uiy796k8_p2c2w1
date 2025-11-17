@@ -1,9 +1,15 @@
 import Spline from '@splinetool/react-spline'
 import { motion } from 'framer-motion'
+import Logo from './Logo'
 
 function Hero() {
   return (
     <section className="relative overflow-hidden pt-28 sm:pt-32 pb-24 bg-[#0a1020]">
+      {/* Watermark logo in the background */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-5">
+        <Logo size={820} animated={false} />
+      </div>
+
       <div className="absolute inset-0">
         <div className="absolute -top-40 right-0 h-[60rem] w-[60rem] bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.15),transparent_60%)] blur-3xl" />
         <div className="absolute -bottom-40 left-0 h-[50rem] w-[50rem] bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.15),transparent_60%)] blur-3xl" />
@@ -66,6 +72,10 @@ function Hero() {
             transition={{ duration: 0.8 }}
             className="relative h-[560px] rounded-2xl border border-white/10 bg-white/5 backdrop-blur overflow-hidden"
           >
+            {/* Center animated logo above Spline as a hero focal element */}
+            <div className="absolute inset-0 grid place-items-center pointer-events-none">
+              <Logo size={340} animated />
+            </div>
             <div className="absolute inset-0">
               <Spline scene="https://prod.spline.design/FduaNp3csZktbOi3/scene.splinecode" style={{ width: '100%', height: '100%' }} />
             </div>
